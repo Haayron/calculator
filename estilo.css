@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --bg-color: linear-gradient(to bottom, #007cb6, #31389c);
+    --btn-color: #0096a1;
+    --btn-color-hover: #1c005ccc;
+    --btn-bg: #ffffff;
+    --btn-op-bg: #203747;
+    --output-bg-color: #c0dde2;
+    --output-color: #1c005c;
+}
+
+body{
+    background: var(--bg-color);
+
+}
+
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: minmax(120px, auto) repeat(5, 5rem);
+}
+
+.grid-container > button {
+    cursor: pointer;
+    font-size: 1.7rem;
+    border: none;
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+}
+
+.grid-container > button:hover{
+    background-color: rgb(50, 167, 137);
+    color: black;
+}
+
+.grid-container > .operator {
+    background-color: var(--btn-op-bg);
+} 
+
+.span-two{
+    grid-column: span 2;
+}
+
+.grid-container > .output{
+    grid-column: 1/-1;
+    background-color: var(--output-bg-color);
+    color: var(--output-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output > .previous-operand{
+    color: var(--btn-color-hover);
+    font-size: 1.5rem;
+}
+
+.grid-container > .output > .current-operand{
+    font-size: 2rem;
+}
+
+/* darkmode /
